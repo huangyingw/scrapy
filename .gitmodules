@@ -1,0 +1,3 @@
+[submodule "quotesbot"]
+	path = quotesbot
+	url = https://github.com/scrapy/quotesbot.git
