@@ -1,3 +1,6 @@
 [submodule "quotesbot"]
 	path = quotesbot
 	url = https://github.com/scrapy/quotesbot.git
+[submodule "sehuatang"]
+	path = sehuatang
+	url = git@bitbucket.org:huangyingw/sehuatang.git
