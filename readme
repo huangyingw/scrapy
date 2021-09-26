@@ -19,13 +19,22 @@ search page:
 scrapy shell 'https://rewrfsrewr.xyz/search.php?mod=forum&searchid=176203&orderby=lastpost&ascdesc=desc&searchsubmit=yes&kw=%E6%97%AC%E6%9E%9C'
 response.css('a[href*="forum.php?mod=viewthread"]::attr(href)').getall()
 
+docs/topics/spiders.rst:234             for href in response.xpath('//a/@href').getall():
+docs/topics/spiders.rst:464             return response.follow(url, self.parse_additional_page, cb_kwargs=dict(item=item))
+
 next page:
 scrapy shell 'https://rewrfsrewr.xyz/search.php?mod=forum&searchid=176203&orderby=lastpost&ascdesc=desc&searchsubmit=yes&kw=%E6%97%AC%E6%9E%9C'
 response.xpath("//a[contains(text(), '下一页')]/@href").getall()
 
+sehuatang/tutorial/spiders/quotes_spider.py:21         next_page = response.css('li.next a::attr(href)').get()
+quotesbot/quotesbot/spiders/toscrape-css.py:19         next_page_url = response.css("li.next > a::attr(href)").extract_first()
+
 torrent:
 scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
 response.xpath('//a[contains(@href, ".torrent")]/@href').getall()
+
+download
+docs/topics/media-pipeline.rst:527                  yield scrapy.Request(file_url)
 
 magnet:
 scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
