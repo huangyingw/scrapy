@@ -46,3 +46,7 @@ scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlig
 //li[contains(text(),'magnet:?')]
 response.xpath("//li[contains(.//text(), 'magnet:?')]").getall()
 response.xpath("//li[contains(text(), 'magnet:?')]/text()").getall()
+
+next page:
+scrapy shell 'https://rewrfsrewr.xyz/search.php?mod=forum&searchid=176203&orderby=lastpost&ascdesc=desc&searchsubmit=yes&kw=%E6%97%AC%E6%9E%9C'
+response.xpath("//a[contains(text(), '下一页')]/@href").getall()
