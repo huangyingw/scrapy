@@ -17,23 +17,6 @@ sehuatang/tutorial/spiders/quotes_spider.py
 
 search page:
 scrapy shell 'https://rewrfsrewr.xyz/search.php?mod=forum&searchid=176203&orderby=lastpost&ascdesc=desc&searchsubmit=yes&kw=%E6%97%AC%E6%9E%9C'
-response.css('a::attr(href)').getall()
-response.xpath('//a[contains(@href, "forum")]/text()').re(r'forum:\s*(.*)')
-response.xpath('//a[contains(@href, "image")]/text()').re(r'forum:\s*(.*)')
-response.xpath('//a/@href/text()').getall()
-response.xpath('//a/@href').getall()
-response.xpath('//a/@href').re(r'forum:\s*(.*)')
-
-response.css('a::attr(href)').getall()
-response.css('a[href*=forum.php?mod=viewthread]::attr(href)').getall()
-response.follow_all(css='a[href*="forum.php?mod=viewthread"]')
-
-docs/topics/selectors.rst:394 >>> response.xpath('//a[contains(@href, "image")]/text()').re(r'Name:\s*(.*)')
-docs/topics/selectors.rst:405 >>> response.xpath('//a[contains(@href, "image")]/text()').re_first(r'Name:\s*(.*)')
-//*[@id="590125"]/h3/a
-/html/body/div[5]/div/div/div[2]/ul/li[4]/h3/a
-
-response.css('a[href*="forum.php?mod=viewthread"]').getall()
 response.css('a[href*="forum.php?mod=viewthread"]::attr(href)').getall()
 
 torrent:
