@@ -15,6 +15,7 @@ magnet
 
 sehuatang/tutorial/spiders/quotes_spider.py
 
+search page:
 scrapy shell 'https://rewrfsrewr.xyz/search.php?mod=forum&searchid=176203&orderby=lastpost&ascdesc=desc&searchsubmit=yes&kw=%E6%97%AC%E6%9E%9C'
 response.css('a::attr(href)').getall()
 response.xpath('//a[contains(@href, "forum")]/text()').re(r'forum:\s*(.*)')
@@ -34,3 +35,14 @@ docs/topics/selectors.rst:405 >>> response.xpath('//a[contains(@href, "image")]/
 
 response.css('a[href*="forum.php?mod=viewthread"]').getall()
 response.css('a[href*="forum.php?mod=viewthread"]::attr(href)').getall()
+
+torrent:
+scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
+//a[contains(.,'.torrent')]
+response.xpath('//a[contains(@href, ".torrent")]/@href').getall()
+
+magnet:
+scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
+//li[contains(text(),'magnet:?')]
+response.xpath("//li[contains(.//text(), 'magnet:?')]").getall()
+response.xpath("//li[contains(text(), 'magnet:?')]/text()").getall()
