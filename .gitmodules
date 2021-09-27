@@ -4,3 +4,15 @@
 [submodule "sehuatang"]
 	path = sehuatang
 	url = git@bitbucket.org:huangyingw/sehuatang.git
+[submodule "scrapy-examples"]
+	path = scrapy-examples
+	url = https://github.com/geekan/scrapy-examples.git
+[submodule "Scrapy-Samples"]
+	path = Scrapy-Samples
+	url = https://github.com/mjhea0/Scrapy-Samples.git
+[submodule "scrapy-tutorial"]
+	path = scrapy-tutorial
+	url = https://github.com/harrywang/scrapy-tutorial.git
+[submodule "scrapy-spider-example"]
+	path = scrapy-spider-example
+	url = https://github.com/AccordBox/scrapy-spider-example.git
