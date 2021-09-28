@@ -33,10 +33,22 @@ torrent:
 scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
 response.xpath('//a[contains(@href, ".torrent")]/@href').getall()
 
+scrapy-examples/sis/sis/spiders/sis_spider.py:52             item['torrents'] = [urljoin(response.url, x) for x in site.css('.t_attachlist a[href*=attachment]::attr(href)').extract()]
+
 download
 docs/topics/media-pipeline.rst:527                  yield scrapy.Request(file_url)
+docs/topics/media-pipeline.rst:96     ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
+docs/topics/media-pipeline.rst:108    FILES_STORE = '/path/to/valid/dir'
+sehuatang/tutorial/settings.py:65 #ITEM_PIPELINES = {
+
+scrapy/pipelines/media.py:87         requests = arg_to_iter(self.get_media_requests(item, info))
+docs/topics/media-pipeline.rst:501         class MyFilesPipeline(FilesPipeline):
 
 magnet:
 scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
 response.xpath("//li[contains(text(), 'magnet:?')]/text()").getall()
+csv
 
+title:
+scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
+response.xpath("//span[@id='thread_subject']/text()").get()
