@@ -16,3 +16,9 @@
 [submodule "scrapy-spider-example"]
 	path = scrapy-spider-example
 	url = https://github.com/AccordBox/scrapy-spider-example.git
+[submodule "torrents-crawler"]
+	path = torrents-crawler
+	url = https://github.com/yasoob/torrents-crawler.git
+[submodule "get_torrents"]
+	path = get_torrents
+	url = https://github.com/philippeoz/get_torrents.git
