@@ -46,7 +46,9 @@ docs/topics/media-pipeline.rst:501         class MyFilesPipeline(FilesPipeline):
 
 magnet:
 scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
-response.xpath("//li[contains(text(), 'magnet:?')]/text()").getall()
+response.xpath("//li[contains(text(), 'magnet:?')]/text()").re(r'(magnet:.*)')
+scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=124609&highlight=jenna%20haze'
+response.xpath("//font[contains(text(), 'magnet:?')]/text()").re(r'(magnet:.*)')
 csv
 
 title:
