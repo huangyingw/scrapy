@@ -2,7 +2,7 @@
     url = https://github.com/scrapy/scrapy.git
     fetch = +refs/heads/*:refs/remotes/scrapy/*
 [remote "origin"]
-    url = git@github.com:huangyingw/scrapy_scrapy.git
+    url = git@github.com:huangyingw/scrapy.git
     fetch = +refs/heads/*:refs/remotes/origin/*
 [push]
     remote = origin
