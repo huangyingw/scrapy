@@ -21,6 +21,7 @@
     ignore = *.gdio.diff
     ignore = Scrapy-Samples
     ignore = get_torrents
+    ignore = install.sh
     ignore = quotesbot
     ignore = scrapy-examples
     ignore = scrapy-spider-example
