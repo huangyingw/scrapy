@@ -54,3 +54,22 @@ csv
 title:
 scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
 response.xpath("//span[@id='thread_subject']/text()").get()
+
+scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=228022&page=1&authorid=328820'
+response.xpath("//td[contains(text(), 'magnet:?')]/text()").re(r'(magnet:.*)')
+
+scrapy shell 'https://rewrfsrewr.xyz/thread-693351-1-1.html'
+response.xpath("//td[contains(text(),'【影片名称】：')]/text()").re(r'出演女优.*：(.*)')[0] 
+
+response.xpath("//td[contains(text(),'【影片名称】：')]/text()").re(r'出演女优.*：(.*)')[0].encode("ascii", "ignore").decode() 
+
+string_with_nonASCII = "àa string withé fuünny charactersß."
+
+
+encoded_string = string_with_nonASCII.encode("ascii", "ignore")
+
+decode_string = encoded_string.decode()
+
+mosaic:
+scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=691819&extra=&ordertype=2'
+response.xpath("//*[contains(.,'是否有码')]/text()").re(r'是否有码.*：(.*)')
