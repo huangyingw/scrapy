@@ -1,26 +1,30 @@
 diff --git a/.gitmodules b/.gitmodules
 new file mode 100644
-index 00000000..689f2314
+index 00000000..7f38f2bd
 --- /dev/null
 +++ ./.gitmodules
-@@ -0,0 +1,6 @@
+@@ -0,0 +1,24 @@
 +[submodule "quotesbot"]
 +	path = quotesbot
 +	url = https://github.com/scrapy/quotesbot.git
 +[submodule "sehuatang"]
 +	path = sehuatang
 +	url = git@bitbucket.org:huangyingw/sehuatang.git
-diff --git a/quotesbot b/quotesbot
-new file mode 160000
-index 00000000..16ec3f41
---- /dev/null
-+++ ./quotesbot
-@@ -0,0 +1 @@
-+Subproject commit 16ec3f4176db67ca9132f7e4431d7823e5e28974
-diff --git a/sehuatang b/sehuatang
-new file mode 160000
-index 00000000..41139cb2
---- /dev/null
-+++ ./sehuatang
-@@ -0,0 +1 @@
-+Subproject commit 41139cb26e51919ff4b4b7f130e6bc00587fd66d
++[submodule "scrapy-examples"]
++	path = scrapy-examples
++	url = https://github.com/geekan/scrapy-examples.git
++[submodule "Scrapy-Samples"]
++	path = Scrapy-Samples
++	url = https://github.com/mjhea0/Scrapy-Samples.git
++[submodule "scrapy-tutorial"]
++	path = scrapy-tutorial
++	url = https://github.com/harrywang/scrapy-tutorial.git
++[submodule "scrapy-spider-example"]
++	path = scrapy-spider-example
++	url = https://github.com/AccordBox/scrapy-spider-example.git
++[submodule "torrents-crawler"]
++	path = torrents-crawler
++	url = https://github.com/yasoob/torrents-crawler.git
++[submodule "get_torrents"]
++	path = get_torrents
++	url = https://github.com/philippeoz/get_torrents.git
