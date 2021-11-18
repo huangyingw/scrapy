@@ -25,6 +25,8 @@
     ignore = scrapy-examples
     ignore = scrapy-spider-example
     ignore = scrapy-tutorial
+    ignore = sehuatang
+    ignore = torrents-crawler
 [deploy]
 	host = localhost
 	path = ~/myproject/git/tools/scrapy/scrapy
