@@ -46,8 +46,12 @@ docs/topics/media-pipeline.rst:501         class MyFilesPipeline(FilesPipeline):
 
 magnet:
 scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
-response.xpath("//li[contains(text(), 'magnet:?')]/text()").getall()
-response.xpath("//font[contains(text(), 'magnet:?')]/text()").getall()
+scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=228022&page=1&authorid=328820'
+scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=124609&highlight=jenna%20haze'
+scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&action=printable&tid=96790'
+response.xpath("//*[contains(.,'magnet')]/text()").re(r'(magnet:.*)&dn=.*')
+
+
 csv
 
 title:
@@ -61,8 +65,8 @@ response.css('a[href*="thread-"][onclick="atarget(this)"]::attr(href)').getall()
 scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=124609&highlight=Jenna%20Haze'
 scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=612513&highlight=%E4%B8%89%E4%B8%8A%E6%82%A0%E4%BA%9A'
 
+actress:
 scrapy shell 'https://rewrfsrewr.xyz/thread-693351-1-1.html'
-response.xpath("//td[contains(text(),'【影片名称】：')]/text()").re(r'出演女优.*：(.*)')[0]
+response.xpath("//*[contains(.,'出演女优')]/text()").re(r'出演女优.*：(.*)')
 
-scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=228022&page=1&authorid=328820'
-response.xpath("//td[contains(.,'magnet')]/text()").re(r'(magnet:.*)')
+item
