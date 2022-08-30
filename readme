@@ -30,8 +30,20 @@ sehuatang/tutorial/spiders/quotes_spider.py:21         next_page = response.css(
 quotesbot/quotesbot/spiders/toscrape-css.py:19         next_page_url = response.css("li.next > a::attr(href)").extract_first()
 
 torrent:
-scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=413893&highlight=%E6%97%AC%E6%9E%9C'
-response.xpath('//a[contains(@href, ".torrent")]/@href').getall()
+scrapy shell 'https://rewrfsrewr.xyz/forum.php?mod=viewthread&tid=83750&highlight=%E5%9B%AD%E7%94%B0'
+response.xpath('//*[contains(., ".torrent")]/@href').getall()
+response.xpath('//*[contains(., ".torrent")]/@href').get()
+https://rewrfsrewr.xyz/forum.php?mod=attachment&aid=NzcxNDd8MzhlYzZmZDd8MTY0MzE3ODUzNXwwfDgzNzUw
+
+from urllib.parse import urlparse
+
+def get_domain(self, response):
+    parsed_uri = urlparse(response.url)
+    domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
+    print(domain)
+    return domain
+
+print(domain + response.xpath('//*[contains(., ".torrent")]/@href').get())
 
 scrapy-examples/sis/sis/spiders/sis_spider.py:52             item['torrents'] = [urljoin(response.url, x) for x in site.css('.t_attachlist a[href*=attachment]::attr(href)').extract()]
 
@@ -70,3 +82,4 @@ scrapy shell 'https://rewrfsrewr.xyz/thread-693351-1-1.html'
 response.xpath("//*[contains(.,'出演女优')]/text()").re(r'出演女优.*：(.*)')
 
 item
+\u63a5\u53e3\u5df2\u4e0b\u7ebf"}
