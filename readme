@@ -97,10 +97,3 @@ zip
 scrapy shell 'https://sehuatang.org/forum.php?mod=viewthread&tid=975008&highlight='
 response.xpath('//*[contains(., ".zip")]/@href').getall()
 response.xpath('//*[contains(., ".zip")]/text()').re(r'.*.zip')
-
-scrapy shell 'https://sehuatang.org/forum.php?mod=viewthread&tid=975561&highlight='
-response.xpath("//*[contains(text(),'magnet')]/text()")
->>> response.xpath("//*[contains(text(),'magnet')]/text()")
-[<Selector xpath="//*[contains(text(),'magnet')]/text()" data='magnet:?xt=urn:btih:078EE54CC6F8535E3...'>, <Selector xpath="//*[contains(text(),'magnet')]/text()" data='magnet
-:?xt=urn:btih:217A7C7CD8CEE5135...'>]
-
