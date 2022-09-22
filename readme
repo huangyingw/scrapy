@@ -87,16 +87,11 @@ item
 scrapy shell 'https://sehuatang.org/forum.php?mod=viewthread&tid=894020&highlight='
 response.xpath("//*[contains(.,'115://')]/text()").re(r'115://.*') 
 
-response.xpath("//*[contains(.,'115://')]/text()").getall()
-response.xpath("//*[contains(.,'115://')]/text()").re(r'115://.*(.*)') 
-response.xpath("//*[contains(.,'115://')]/text()").getall().re(r'115://.*(.*)')
-response.xpath("//*[contains(.,'115://')]").getall()
-//li[contains(text(),'magnet:?xt=urn:btih:217A7C7CD8CEE51351A49E7A9F483A')]
-//td[@id='postmessage_7103162']
-//td[@id='postmessage_7103162']
-#postmessage_7103162
-//td[@id='postmessage_7103162']
-//*[contains(text(),'magnet:?xt=urn:btih:078EE54CC6F8535E3F730AF90B1AAF')]
+rar
+scrapy shell 'https://sehuatang.org/forum.php?mod=viewthread&tid=857296&highlight='
+response.xpath('//*[contains(., ".rar")]/@href').getall()
+response.xpath('//*[contains(., ".rar")]/text()').re(r'.*.rar')
+wget --content-disposition -nc 'https://iming.fj5i3.com/tupian/down_v2.php?sign=eyJ2YWx1ZSI6IkZmcllIaTN5ZG90cFBteTE1Yk5pZVU1eFJCVFAyKzQ2d0QxUmNsWjMwTzNON0h3S0Nia0Q3Y0pxaSttWndhK1NIWjdhdlMxa2RkeTkrUklRbE5aY UlldDFUYzlPeUhxUlhTOVVRRjBFOEFJOHNsNVZzK2dzU2FYMVwvUFZ0ZEFwdmZqM3dWNndZS3BkRmFzOTlzcTBRTUk0MEgrNTlMc3YzNkQzckJaVHc1SHlLTEVHNnRsdDA2VmU5Uk9IOSs3MUNTTHVPVEZ5eVRpSzdwejE1M21HSmpt eWQ0eGVhK0l1VzZKMTRrMDkzSHE3MGZSUE51VGVFZkhPMFwvdGNQMGdvSCIsIml2IjoiOGhTa2VQTjdqWkQwOVZ1VyJ9'
 
 https://sehuatang.org/forum.php?mod=viewthread&tid=975008&highlight=
 //a[contains(text(),'润滑多P_sha1.zip')]
