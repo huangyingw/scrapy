@@ -85,9 +85,12 @@ item
 
 115
 scrapy shell 'https://sehuatang.org/forum.php?mod=viewthread&tid=894020&highlight='
-response.xpath("//*[contains(.,'115://')]")
-response.xpath("//*[contains(.,'115://')]/text()")
-response.xpath("//*[contains(.,'115://')]/text()").re(r'115://.*：(.*)') 
+response.xpath("//*[contains(.,'115://')]/text()").re(r'115://.*') 
+
+response.xpath("//*[contains(.,'115://')]/text()").getall()
+response.xpath("//*[contains(.,'115://')]/text()").re(r'115://.*(.*)') 
+response.xpath("//*[contains(.,'115://')]/text()").getall().re(r'115://.*(.*)')
+response.xpath("//*[contains(.,'115://')]").getall()
 //li[contains(text(),'magnet:?xt=urn:btih:217A7C7CD8CEE51351A49E7A9F483A')]
 //td[@id='postmessage_7103162']
 //td[@id='postmessage_7103162']
