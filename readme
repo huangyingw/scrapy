@@ -82,4 +82,25 @@ scrapy shell 'https://rewrfsrewr.xyz/thread-693351-1-1.html'
 response.xpath("//*[contains(.,'出演女优')]/text()").re(r'出演女优.*：(.*)')
 
 item
-\u63a5\u53e3\u5df2\u4e0b\u7ebf"}
+
+115
+scrapy shell 'https://sehuatang.org/forum.php?mod=viewthread&tid=894020&highlight='
+response.xpath("//*[contains(.,'115://')]")
+response.xpath("//*[contains(.,'115://')]/text()")
+response.xpath("//*[contains(.,'115://')]/text()").re(r'115://.*：(.*)') 
+//li[contains(text(),'magnet:?xt=urn:btih:217A7C7CD8CEE51351A49E7A9F483A')]
+//td[@id='postmessage_7103162']
+//td[@id='postmessage_7103162']
+#postmessage_7103162
+//td[@id='postmessage_7103162']
+//*[contains(text(),'magnet:?xt=urn:btih:078EE54CC6F8535E3F730AF90B1AAF')]
+
+https://sehuatang.org/forum.php?mod=viewthread&tid=975008&highlight=
+//a[contains(text(),'润滑多P_sha1.zip')]
+
+scrapy shell 'https://sehuatang.org/forum.php?mod=viewthread&tid=975561&highlight='
+response.xpath("//*[contains(text(),'magnet')]/text()")
+>>> response.xpath("//*[contains(text(),'magnet')]/text()")
+[<Selector xpath="//*[contains(text(),'magnet')]/text()" data='magnet:?xt=urn:btih:078EE54CC6F8535E3...'>, <Selector xpath="//*[contains(text(),'magnet')]/text()" data='magnet
+:?xt=urn:btih:217A7C7CD8CEE5135...'>]
+
