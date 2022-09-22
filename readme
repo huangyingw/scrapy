@@ -93,6 +93,7 @@ response.xpath('//*[contains(., ".rar")]/@href').getall()
 response.xpath('//*[contains(., ".rar")]/text()').re(r'.*.rar')
 wget --content-disposition -nc 'https://iming.fj5i3.com/tupian/down_v2.php?sign=eyJ2YWx1ZSI6IkZmcllIaTN5ZG90cFBteTE1Yk5pZVU1eFJCVFAyKzQ2d0QxUmNsWjMwTzNON0h3S0Nia0Q3Y0pxaSttWndhK1NIWjdhdlMxa2RkeTkrUklRbE5aY UlldDFUYzlPeUhxUlhTOVVRRjBFOEFJOHNsNVZzK2dzU2FYMVwvUFZ0ZEFwdmZqM3dWNndZS3BkRmFzOTlzcTBRTUk0MEgrNTlMc3YzNkQzckJaVHc1SHlLTEVHNnRsdDA2VmU5Uk9IOSs3MUNTTHVPVEZ5eVRpSzdwejE1M21HSmpt eWQ0eGVhK0l1VzZKMTRrMDkzSHE3MGZSUE51VGVFZkhPMFwvdGNQMGdvSCIsIml2IjoiOGhTa2VQTjdqWkQwOVZ1VyJ9'
 
+zip
 https://sehuatang.org/forum.php?mod=viewthread&tid=975008&highlight=
 //a[contains(text(),'润滑多P_sha1.zip')]
 
