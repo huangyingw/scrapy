@@ -1,4 +1,5 @@
 pip install Scrapy
+api python3-scrapy
 next_page = response.css
 how to control the recursive depth
 how to download specific file, like *.torrent
@@ -97,3 +98,16 @@ zip
 scrapy shell 'https://sehuatang.org/forum.php?mod=viewthread&tid=975008&highlight='
 response.xpath('//*[contains(., ".zip")]/@href').getall()
 response.xpath('//*[contains(., ".zip")]/text()').re(r'.*.zip')
+
+password
+scrapy shell 'https://sehuatang.org/forum.php?mod=viewthread&tid=186993&highlight='
+response.xpath("//*[contains(., '解压密码')]/text()").getall()
+response.xpath("//*[contains(., '解压密码')]/text()").re(r'解压密码.* (.*)')
+response.xpath("//*[contains(., '解压密码')]/text()").re(r'解压密码.* ')
+response.xpath("//*[contains(., '解压密码')]").getall()
+response.xpath("//*[contains(text(), '解压密码')]").getall()
+response.xpath("//*[contains(text(), '解压密码')]/text()").getall()
+response.xpath("//*[contains(., '解压密码')]/text()").getall()
+//tbody/tr/td[@id='postmessage_1216685']/div[12]/div[2]
+
+"115://It’s Shower Time – Kendra Sunderland.mp4|1542203635|E48A24834B9839DAAF321C09BAC4A13643FD807F|63E2EE621588FF4D491A3E73321C225E17045D5E",
